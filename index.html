@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div class="container" style="margin-top:20px;">
+    <div class="page-header">
+        <h1>Design Patterns <small>Explained simply</small></h1>
+        <hr/>
+    </div>
+    <h3>Creational Patterns</h3>
+<p>These design patterns are all about class instantiation.
+    This pattern can be further divided into class-creation patterns and object-creational patterns.<br/>
+While class-creation patterns use inheritance effectively in the instantiation process,
+    object-creation patterns use delegation effectively to get the job done.</p>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="pattern in patterns">
+            <div class="thumbnail">
+                <p class="caption">
+                    <h3>{{ pattern[0] }}</h3>
+                    <p>{{ pattern[1]}}</p>
+                <p><a href="{{ pattern[3] }}" class="btn pull-right" role="button">More</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
