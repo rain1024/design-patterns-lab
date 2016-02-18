@@ -15,32 +15,31 @@
 <pre>
 <code class="language-javascript">
     function On(){
-    this.click = function(context){
+  this.click = function(context){
     console.log("Turn On");
     context.setState(new Off());
-    }
-    }
+  }
+}
 
-    function Off(){
-    this.click = function(){
+function Off(){
+  this.click = function(){
     console.log("Turn Off");
     context.setState(new On());
-    }
+  }
 
-    }
+}
 
-    function Context(){
-    this.current = new Off();
+function Context(){
+  this.current = new Off();
 
-    this.setState = function(state){
+  this.setState = function(state){
     this.current = state;
-    };
+  };
 
-    this.click = function(){
+  this.click = function(){
     this.current.click(context);
-    }
-    }
-
+  }
+}
 </code>
 </pre>
 
@@ -48,21 +47,21 @@
         <h3>Usage</h3>
 <pre>
 <code class="language-javascript">
-    var context = new Context();
-    context.click();
-    context.click();
-    context.click();
-    context.click();
+var context = new Context();
+context.click();
+context.click();
+context.click();
+context.click();
 </code>
 </pre>
 
         <b>Result</b>
 <pre>
 <code class="language-javascript">
-    Turn Off
-    Turn On
-    Turn Off
-    Turn On
+Turn Off
+Turn On
+Turn Off
+Turn On
 </code>
 </pre>
 

@@ -28,4 +28,9 @@ function Context(){
     this.current.click(context);
   }
 }
+var context = new Context();
+context.click();
+context.click();
+context.click();
+context.click();
 
