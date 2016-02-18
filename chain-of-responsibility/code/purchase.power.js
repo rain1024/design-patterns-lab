@@ -47,7 +47,8 @@ function VicePresident() {
 
   this.processRequest = function (request) {
     if (request.getAmount() <= this.ALLOWABLE) {
-      console.log("VicePresident will approve $" + request.getAmount());
+      console.log("VicePresident will approve $" +
+        request.getAmount());
     } else {
       this.successor.processRequest(request);
     }
