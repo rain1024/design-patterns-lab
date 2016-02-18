@@ -1,3 +1,7 @@
 .thumbnail {
-    height: 220px;
+    height: 420px;
+}
+
+.thumbnail img {
+    width: 100%;
 }
