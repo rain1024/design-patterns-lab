@@ -4,14 +4,14 @@
 
 function On(){
   this.click = function(context){
-    console.log("Turn On");
+    console.log("Turn Off");
     context.setState(new Off());
   }
 }
 
 function Off(){
   this.click = function(){
-    console.log("Turn Off");
+    console.log("Turn On");
     context.setState(new On());
   }
 
