@@ -1,0 +1,23 @@
+▼ Car
+    body: "small"
+    engine: "356 cc EA Straight-2"
+    exterior: "normal"
+    name: "Honda Life"
+    power: "35hp"
+    wheel: 4
+
+▼ Car
+    body: "medium"
+    engine: "4.4 L V8"
+    exterior: "expensive"
+    name: "BMW M5"
+    power: "560hp"
+    wheel: 4
+
+▼ Car
+    body: "large"
+    engine: "DDC/MTU 20V4000"
+    exterior: "medium"
+    name: "Liebherr T 282B"
+    power: "3650hp"
+    wheel: 8
