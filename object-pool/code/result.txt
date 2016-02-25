@@ -1,0 +1,5 @@
+Book 'Cpp' is bought
+Book 'Cpp' is borrowed.
+Book 'Cpp' is not available
+Book 'Cpp' is returned to library
+Book 'Cpp' is borrowed.

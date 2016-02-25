@@ -1,0 +1,9 @@
+▼ Phone
+    name: "iPhone 6"
+    price: "$700"
+reng reng
+
+▼ Car
+    name: "LaFerrari FXX K"
+    price: "$1.2M"
+brum brum
