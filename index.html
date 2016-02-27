@@ -1,82 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Design Patterns with love</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="view/ui-effect/sidebar.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design Patterns</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.min.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
-<header id="header-waypoint" class="fixed">
-    <h1>
-        <a href="./">Design Patterns
-            <sup>with ♡</sup>
-        </a>
-    </h1>
-</header>
-<div id="wrapper">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Patterns
-                </a>
-            </li>
-            <li ng-repeat="pattern in patterns"><a href="#pattern-{{pattern[3]}}">{{ pattern[0] }}</a></li>
-        </ul>
-    </div>
-    <!-- /#sidebar-wrapper -->
+    <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="logo-image" src="images/logo.png">
+          </span>
+            <!-- Add spacer, to align navigation to the right in desktop -->
+            <div class="android-header-spacer mdl-layout-spacer"></div>
+            <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+                    <i class="material-icons">search</i>
+                </label>
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container" style="margin-top:20px;">
-
-            <div class="row">
-                <div class="col-sm-6 col-md-4" ng-repeat="pattern in patterns" id="pattern-{{ pattern[3] }}">
-                    <div class="thumbnail">
-                        <img src="./{{ pattern[3] }}/images/avatar.png" alt="...">
-
-                        <div class="caption">
-                            <h3>{{ pattern[0] }}</h3>
-
-                            <p>{{ pattern[1]}}</p>
-
-                            <p><a href="{{ pattern[3] }}" class="btn pull-right" role="button">More</a></p>
-                        </div>
-                    </div>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" id="search-field">
                 </div>
             </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Simple Sidebar</h1>
-
-                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller
-                        screens, and will appear non-collapsed on larger screens. When toggled using the button below,
-                        the menu will appear/disappear. On small screens, the page content will be pushed off
-                        canvas.</p>
-
-                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                    <button class="btn btn-default" id="menu-toggle">Toggle Menu</button>
-                </div>
+            <!-- Navigation -->
+            <div class="android-navigation-container">
+                <nav class="android-navigation mdl-navigation">
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase"
+                       href="http://magizbox.com">MagizBox</a>
+                </nav>
             </div>
+          <span class="android-mobile-title mdl-layout-title">
+            <img class="logo-image" src="images/logo.png">
+          </span>
         </div>
     </div>
-    <!-- /#page-content-wrapper -->
 
+    <div class="android-more-section">
+        <div class="android-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp"
+                 ng-repeat="pattern in patterns">
+                <div class="mdl-card__media">
+                    <img src="./{{ pattern[3] }}/images/avatar.png">
+                </div>
+                <div class="mdl-card__title">
+                    <h4 class="mdl-card__title-text">{{ pattern[0] }}</h4>
+                </div>
+                <div class="mdl-card__supporting-text" >
+                    <span class="mdl-typography--font-light mdl-typography--subhead">
+                        {{ pattern[1] }}
+                    </span>
+                </div>
+                <div class="mdl-card__actions">
+                    <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="./{{pattern[3]}}/">
+                        Discover
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
-<!-- /#wrapper -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
-<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-<script src="script.js"></script>
-<script src="ui-effect.js"></script>
-<script src="view/ui-effect/sidebar.js"></script>
+<script src="./script.js"></script>
+<script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
 </body>
 </html>
